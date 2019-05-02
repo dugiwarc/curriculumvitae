@@ -130,11 +130,16 @@ ul li {
   margin-bottom: 10vh;
 }
 
+.projects {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
 .projectDesc {
   margin-top: 1vh;
   font-size: 1.5rem;
   font-variation-settings: "wght" 200, "wdth" 400;
-  padding: 0 10vw;
   text-align: center;
 }
 
