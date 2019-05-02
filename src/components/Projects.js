@@ -37,7 +37,9 @@ export default class Projects extends Component {
 
           {/* Abc Asian */}
           <div className="projectTitle">
-            <a href="https://asianbeautyc.netlify.com">ABC Asian</a>
+            <a href="https://stupefied-lichterman-cd4eea.netlify.com">
+              ABC Asian
+            </a>
             <div className="projectDesc">
               ABC Asian is my first hands-on experience with React. It serves as
               an e-commerce website and uses Paypal as a payment service.
