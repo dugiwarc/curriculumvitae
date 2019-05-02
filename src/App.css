@@ -157,3 +157,16 @@ ul li {
 .theMiddleMan {
   margin: 0 2vw;
 }
+
+@media screen and (max-width: 600px) {
+  .theMiddleMan {
+    margin: 0;
+  }
+  .Profile {
+    width: 330px;
+  }
+
+  .App {
+    font-size: 1rem;
+  }
+}
