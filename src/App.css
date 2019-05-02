@@ -1,33 +1,159 @@
+@font-face {
+  font-family: "Gingham";
+  src: url("./Gingham.woff2") format("woff2");
+}
+
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Gingham", sans-serif;
+  font-variation-settings: "wght" 700, "wdth" 400;
+  font-size: 2rem;
+  margin: 0;
+  animation: boldAnimation 2s infinite;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.gitHub {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gitHub i {
+  color: black;
+  font-size: 4rem;
+}
+
+.gitHub a {
+  font-size: 0.9rem;
+}
+
+.nameAndStatus {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Profile settings */
+.Profile {
+  display: flex;
+  width: 485px;
+  justify-content: space-between;
+}
+
+.status {
+  font-size: 1rem;
+}
+
+.nameSurname {
+  font-size: 2.5rem;
+}
+
+.Languages {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+/* Language settings */
+.languageRoller {
+  display: flex;
+  widows: 800px;
+  font-size: 5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.languagesMain {
+  height: 100px;
+  overflow: hidden;
+}
+
+ul li {
+  list-style-type: none;
+  transform: translate(-20px, 30px);
+  animation: roller 15s infinite cubic-bezier(0.56, 0.54, 0.62, 1.15);
+  animation-direction: alternate;
+}
+
+@keyframes roller {
+  10% {
+    transform: translate(-20px, -85px);
+  }
+  20% {
+    transform: translate(-20px, -175px);
+  }
+  30% {
+    transform: translate(-20px, -275px);
+  }
+  40% {
+    transform: translate(-20px, -365px);
+  }
+  50% {
+    transform: translate(-20px, -465px);
+  }
+  60% {
+    transform: translate(-20px, -565px);
+  }
+  70% {
+    transform: translate(-20px, -655px);
+  }
+  80% {
+    transform: translate(-20px, -755px);
+  }
+  90% {
+    transform: translate(-20px, -855px);
+  }
+  100% {
+    transform: translate(-20px, -950px);
+  }
+}
+
+/* Projects settings */
+.Project {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 14vh 0;
+  font-size: 2.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.projectTitle {
+  text-align: center;
+  margin-bottom: 10vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.projectDesc {
+  margin-top: 1vh;
+  font-size: 1.5rem;
+  font-variation-settings: "wght" 200, "wdth" 400;
+  padding: 0 10vw;
+  text-align: center;
+}
+
+.projectMainTitle {
+  font-variation-settings: "wght" 800, "wdth" 400;
+  font-size: 4rem;
+}
+
+.projectImages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projectImages img {
+  height: 200px;
+  margin-top: 4vh;
+}
+
+.theMiddleMan {
+  margin: 0 2vw;
 }
