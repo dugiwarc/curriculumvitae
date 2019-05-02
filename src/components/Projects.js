@@ -29,9 +29,11 @@ export default class Projects extends Component {
               <img src={img_1} alt="" />
               <div className="theMiddleMan" />
               <img src={img_4} alt="" />
+              <div className="theMiddleMan" />
               <img src={img_3} alt="" />
               <div className="theMiddleMan" />
               <img src={img_2} alt="" />
+              <div className="theMiddleMan" />
             </div>
           </div>
 
@@ -48,9 +50,11 @@ export default class Projects extends Component {
               <img src={img_5} alt="" />
               <div className="theMiddleMan" />
               <img src={img_6} alt="" />
+              <div className="theMiddleMan" />
               <img src={img_7} alt="" />
               <div className="theMiddleMan" />
               <img src={img_8} alt="" />
+              <div className="theMiddleMan" />
             </div>
           </div>
         </div>
