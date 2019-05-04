@@ -126,6 +126,9 @@ ul li {
 }
 
 .projectTitle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   margin-bottom: 10vh;
 }
@@ -141,6 +144,7 @@ ul li {
   font-size: 1.5rem;
   font-variation-settings: "wght" 200, "wdth" 400;
   text-align: center;
+  width: 600px;
 }
 
 .projectMainTitle {
@@ -151,7 +155,8 @@ ul li {
 .projectImages {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  width: 830px;
 }
 
 .projectImages img {
@@ -159,19 +164,57 @@ ul li {
   margin-top: 4vh;
 }
 
-.theMiddleMan {
-  margin: 0 2vw;
+.status {
+  animation: glitch-text infinite 3s;
+}
+
+@keyframes glitch-text {
+  0% {
+    transform: translate(30px, 0);
+    clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+  }
+  2% {
+    clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+  }
+  4% {
+    clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+  }
+  5% {
+    clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+  }
+  6% {
+    clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+  }
+  7% {
+    clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+  }
+  8% {
+    clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+  }
+  9% {
+    clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+  }
+  9.9% {
+    transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0)
+      scale3d(-1, -1, 1);
+  }
+  10%,
+  100% {
+    transform: translate(0, 0) scale3d(1, 1, 1);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
 }
 
 @media screen and (max-width: 600px) {
-  .theMiddleMan {
-    margin: 0;
-  }
   .Profile {
     width: 330px;
   }
 
   .App {
     font-size: 1rem;
+  }
+
+  .projectImages {
+    width: 100%;
   }
 }
