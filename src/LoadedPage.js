@@ -17,7 +17,6 @@ export default class LoadedPage extends Component {
 
     var colorPicker = (function() {
       var colors = [
-        "#BFD8D2",
         "#FEDCD2",
         "#DF744A",
         "#DCB239",
