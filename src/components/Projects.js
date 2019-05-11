@@ -1,23 +1,42 @@
 import React, { Component } from "react";
 
-import img_1 from "../imgs/1.png";
-import img_2 from "../imgs/2.png";
-import img_3 from "../imgs/3.png";
-import img_4 from "../imgs/4.png";
+// import img_1 from "../imgs/1.png";
+// import img_2 from "../imgs/2.png";
+// import img_3 from "../imgs/3.png";
+// import img_4 from "../imgs/4.png";
 
-import img_5 from "../imgs/5.png";
-import img_6 from "../imgs/6.png";
-import img_7 from "../imgs/7.png";
-import img_8 from "../imgs/8.png";
+// import img_5 from "../imgs/5.png";
+// import img_6 from "../imgs/6.png";
+// import img_7 from "../imgs/7.png";
+// import img_8 from "../imgs/8.png";
 
 export default class Projects extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isHidden: true
+    };
+  }
+
+  handleClick = () => {
+    console.log("The clock is ticking");
+    // this.setState({
+    //   isHidden: !this.state.isHidden
+    // });
+  };
   render() {
+    const styles = this.state.isHidden ? "projects hidden" : "projects";
     return (
       <div className="Project">
-        <span className="projectMainTitle">Projects</span>
+        <span onClick={this.handleClick} className="projectMainTitle">
+          Projects
+        </span>
+        <div>
+          <h6 styles={{ color: "grey" }}>Click?</h6>
+        </div>
         <hr />
-        <div className="projects">
-          {/* Tusk.world */}
+        {/* 
+        <div className={styles}>
 
           <div className="projectTitle">
             <a href="http:/tusk.world">Tusk.world</a>
@@ -33,7 +52,6 @@ export default class Projects extends Component {
             </div>
           </div>
 
-          {/* Abc Asian */}
           <div className="projectTitle">
             <a href="https://stupefied-lichterman-cd4eea.netlify.com">
               ABC Asian
@@ -48,8 +66,9 @@ export default class Projects extends Component {
               <img src={img_7} alt="" />
               <img src={img_8} alt="" />
             </div>
-          </div>
+          </div> 
         </div>
+          */}
       </div>
     );
   }

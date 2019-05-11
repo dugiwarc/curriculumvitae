@@ -1,19 +1,12 @@
 import React from "react";
 
-import Profile from "./components/Profile";
-import Header from "./components/Header";
-import Languages from "./components/Languages";
-import Projects from "./components/Projects";
-
 import "./App.css";
+import Page from "./Page";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Profile />
-      <Languages />
-      <Projects />
+      <Page />
     </div>
   );
 }
