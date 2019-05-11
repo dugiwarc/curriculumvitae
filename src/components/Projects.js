@@ -32,7 +32,7 @@ export default class Projects extends Component {
           Projects
         </span>
         <div>
-          <h6 styles={{ color: "grey" }}>Click?</h6>
+          <h6 style={{ color: "darkslategrey" }}>N/A</h6>
         </div>
         <hr />
         {/* 
