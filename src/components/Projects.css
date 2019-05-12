@@ -1,0 +1,50 @@
+.Project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 14vh 0;
+  font-size: 2.5rem;
+}
+
+.Project img:hover {
+  transform: scale(1.05);
+  /* transition: 0.1s; */
+}
+
+.Project img:hover ~ .circle {
+  animation: circley 1s;
+}
+
+.Project-container {
+  position: relative;
+}
+
+.Project .circle {
+  position: absolute;
+  transform: translate(45px, -180px) scale(0.3);
+  /* opacity: 0; */
+  transform-origin: center;
+  height: 150px;
+  border-radius: 100px;
+  width: 150px;
+  background: black;
+}
+
+.circle {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show {
+  opacity: 1;
+  transform: translate(150px, -200px) scale(1) !important;
+  transition: 0.4s ease-out;
+}
+
+.circle .text {
+  color: white;
+  font-size: 0.4em;
+}

@@ -12,158 +12,21 @@ body {
   /* background: #433751; */
   /* background: black; */
 }
-
-.loader {
+.LoadingPage div {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #000, #333);
   position: absolute;
   top: 50%;
-  width: 70px;
-  height: 70px;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+  border: 1px solid #ccc;
+  border-radius: 48%;
+  animation: foo 0.3s linear infinite;
 }
-
-.ball {
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: rgba(31, 22, 22, 0.2);
-  -webkit-animation: jelly 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-  animation: jelly 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-}
-.ball:nth-child(2) {
-  z-index: -2;
-  -webkit-transform: scale(1.4);
-  transform: scale(1.4);
-  -webkit-animation: jelly2 2.5s 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-    infinite;
-  animation: jelly2 2.5s 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-}
-.ball:nth-child(3) {
-  z-index: -3;
-  -webkit-transform: scale(1.8);
-  transform: scale(1.8);
-  -webkit-animation: jelly3 2.5s 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-    infinite;
-  animation: jelly3 2.5s 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-}
-.ball:nth-child(4) {
-  z-index: -4;
-  -webkit-transform: scale(2.2);
-  transform: scale(2.2);
-  -webkit-animation: jelly4 2.5s 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-    infinite;
-  animation: jelly4 2.5s 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-}
-
-@-webkit-keyframes jelly {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(0.6);
-    transform: scale(0.6);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes jelly {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(0.6);
-    transform: scale(0.6);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@-webkit-keyframes jelly2 {
-  0% {
-    -webkit-transform: scale(1.4);
-    transform: scale(1.4);
-  }
-  45% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.4);
-    transform: scale(1.4);
-  }
-}
-@keyframes jelly2 {
-  0% {
-    -webkit-transform: scale(1.4);
-    transform: scale(1.4);
-  }
-  45% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.4);
-    transform: scale(1.4);
-  }
-}
-@-webkit-keyframes jelly3 {
-  0% {
-    -webkit-transform: scale(1.8);
-    transform: scale(1.8);
-  }
-  40% {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-  }
-  100% {
-    -webkit-transform: scale(1.8);
-    transform: scale(1.8);
-  }
-}
-@keyframes jelly3 {
-  0% {
-    -webkit-transform: scale(1.8);
-    transform: scale(1.8);
-  }
-  40% {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-  }
-  100% {
-    -webkit-transform: scale(1.8);
-    transform: scale(1.8);
-  }
-}
-@-webkit-keyframes jelly4 {
-  0% {
-    -webkit-transform: scale(2.2);
-    transform: scale(2.2);
-  }
-  35% {
-    -webkit-transform: scale(1.9);
-    transform: scale(1.9);
-  }
-  100% {
-    -webkit-transform: scale(2.2);
-    transform: scale(2.2);
-  }
-}
-@keyframes jelly4 {
-  0% {
-    -webkit-transform: scale(2.2);
-    transform: scale(2.2);
-  }
-  35% {
-    -webkit-transform: scale(1.9);
-    transform: scale(1.9);
-  }
-  100% {
-    -webkit-transform: scale(2.2);
-    transform: scale(2.2);
+@keyframes foo {
+  to {
+    transform: rotate(90deg);
   }
 }

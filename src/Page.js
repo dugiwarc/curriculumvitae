@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import LoadedPage from "./LoadedPage";
 import LoadingPage from "./LoadingPage";
-import anime from "animejs";
 
 export default class Page extends Component {
   constructor() {
@@ -15,7 +14,7 @@ export default class Page extends Component {
       this.setState({
         hasLoaded: true
       });
-    }, 3000);
+    }, 2000);
   }
   render() {
     const loadedPage = <LoadedPage />;

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Projects.css";
 
 // import img_1 from "../imgs/1.png";
 // import img_2 from "../imgs/2.png";
@@ -9,6 +10,7 @@ import React, { Component } from "react";
 // import img_6 from "../imgs/6.png";
 // import img_7 from "../imgs/7.png";
 // import img_8 from "../imgs/8.png";
+import rocketImg from "../suitcase.png";
 
 export default class Projects extends Component {
   constructor() {
@@ -20,21 +22,21 @@ export default class Projects extends Component {
 
   handleClick = () => {
     console.log("The clock is ticking");
-    // this.setState({
-    //   isHidden: !this.state.isHidden
-    // });
+    this.setState({
+      isHidden: !this.state.isHidden
+    });
   };
   render() {
-    const styles = this.state.isHidden ? "projects hidden" : "projects";
+    const stylesCircle = this.state.isHidden ? "circle" : "circle show";
     return (
       <div className="Project">
-        <span onClick={this.handleClick} className="projectMainTitle">
-          Projects
-        </span>
-        <div>
-          <h6 style={{ color: "darkslategrey" }}>N/A</h6>
-        </div>
         <hr />
+        <div className="Project-container" onClick={this.handleClick}>
+          <img src={rocketImg} height={100} alt="projects" />
+          <div className={stylesCircle}>
+            <div className="text">Nothing here yet.</div>
+          </div>
+        </div>
         {/* 
         <div className={styles}>
 

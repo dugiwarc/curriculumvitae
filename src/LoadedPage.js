@@ -13,15 +13,13 @@ export default class LoadedPage extends Component {
     var cW;
     var bgColor = "white";
     var animations = [];
+    // eslint-disable-next-line
     var circles = [];
 
     var colorPicker = (function() {
       var colors = [
-        "#FEDCD2",
-        "#DF744A",
-        "#DCB239",
-        "#94618E",
         "#CD5360",
+        "#94618E",
         "#B37D4E",
         "#438496",
         "#F7CE3E",
@@ -168,6 +166,7 @@ export default class LoadedPage extends Component {
       ctx.globalAlpha = 1;
     };
 
+    // eslint-disable-next-line
     var animate = anime({
       duration: Infinity,
       update: function() {
