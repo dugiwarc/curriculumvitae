@@ -18,9 +18,6 @@ export default class LoadedPage extends Component {
 
     var colorPicker = (function() {
       var colors = [
-        "#CD5360",
-        "#94618E",
-        "#B37D4E",
         "#438496",
         "#F7CE3E",
         "#F7882F",
@@ -56,7 +53,7 @@ export default class LoadedPage extends Component {
     }
 
     function addClickListeners() {
-      document.addEventListener("touchstart", handleEvent);
+      // document.addEventListener("touchstart", handleEvent);
       document.addEventListener("mousedown", handleEvent);
     }
 

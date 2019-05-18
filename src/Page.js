@@ -14,7 +14,7 @@ export default class Page extends Component {
       this.setState({
         hasLoaded: true
       });
-    }, 2000);
+    }, 1000);
   }
   render() {
     const loadedPage = <LoadedPage />;
