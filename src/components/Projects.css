@@ -37,6 +37,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  cursor: url('../imgs/cursor.png');
 }
 
 .show {
@@ -47,14 +48,13 @@
 
 .circle .text {
   color: white;
+  position: absolute;
   font-size: 0.6em;
   width: 70%;
-  height: 40%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   font-family: 'Lobster';
-  transform: translateY(100px);
 }
 
 .presentation-box {

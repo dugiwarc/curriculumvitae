@@ -85,7 +85,6 @@ export default class Projects extends Component {
 
     return (
       <div className="Project">
-        <hr />
         <div className="Project-container">
           <img
             src={rocketImg}
