@@ -12,7 +12,7 @@ export default class Languages extends Component {
               <li>JS</li>
               <li>Node.js</li>
               <li>React</li>
-              <li>EJS</li>
+              <li>Express</li>
               <li>Python</li>
               <li>C</li>
               <li>Haskell</li>
