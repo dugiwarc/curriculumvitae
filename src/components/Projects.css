@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
 .Project {
   display: flex;
   flex-direction: column;
@@ -7,12 +9,9 @@
   font-size: 2.5rem;
 }
 
-.Project img:hover {
-  transform: scale(1.05);
-  /* transition: 0.1s; */
-}
 
-.Project img:hover ~ .circle {
+
+.Project img:hover~.circle {
   animation: circley 1s;
 }
 
@@ -21,21 +20,23 @@
 }
 
 .Project .circle {
+  display: flex;
   position: absolute;
   transform: translate(45px, -180px) scale(0.3);
-  /* opacity: 0; */
   transform-origin: center;
   height: 150px;
   border-radius: 100px;
   width: 150px;
-  background: black;
+  background: #202020;
 }
 
 .circle {
+  position: relative;
   opacity: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .show {
@@ -46,5 +47,74 @@
 
 .circle .text {
   color: white;
-  font-size: 0.4em;
+  font-size: 0.6em;
+  width: 70%;
+  height: 40%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: 'Lobster';
+  transform: translateY(-50px);
+}
+
+.presentation-box {
+  border-radius: 0 !important;
+  height: 310px !important;
+  width: 350px !important;
+  transform: translate(150px, -250px) !important;
+}
+
+.Project-images {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 310px;
+  height: 200px;
+  overflow: hidden;
+  margin-top: -23px;
+}
+
+.project-images {
+  /* position: absolute; */
+  height: 160px;
+  opacity: 0;
+  transform: translateX(315px);
+  transition: .5s;
+}
+
+
+
+.reveal {
+  opacity: 1 !important;
+}
+
+.right-button,
+.left-button {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  background: black;
+  opacity: 0.6;
+  z-index: 5;
+}
+
+.right-button {
+  left: 0;
+}
+
+.left-button {
+  right: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.description-text {
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  padding: 0 50px;
+  margin-top: -50px;
 }

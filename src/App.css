@@ -153,39 +153,8 @@ canvas {
   position: absolute;
 }
 
-.projects {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-}
-
 .hidden {
   display: none;
-}
-
-.projectDesc {
-  margin-top: 1vh;
-  font-size: 1.5rem;
-  font-variation-settings: "wght"200, "wdth"400;
-  text-align: center;
-  width: 600px;
-}
-
-.projectMainTitle {
-  font-variation-settings: "wght"800, "wdth"400;
-  font-size: 4rem;
-}
-
-.projectImages {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 830px;
-}
-
-.projectImages img {
-  height: 200px;
-  margin-top: 4vh;
 }
 
 .status {
@@ -244,9 +213,5 @@ canvas {
 
   .App {
     font-size: 1rem;
-  }
-
-  .projectImages {
-    width: 100%;
   }
 }
