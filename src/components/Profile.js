@@ -5,7 +5,7 @@ export default class Profile extends Component {
     return (
       <div className="Profile">
         <div className="nameAndStatus">
-          <div className="nameSurname">Gheorghe Botnaru</div>
+          <div className="nameSurname">George Botnaru</div>
           <div className="status">- Full Stack Developer -</div>
         </div>
         <div className="gitHub">

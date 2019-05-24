@@ -53,7 +53,7 @@ export default class LoadedPage extends Component {
     }
 
     function addClickListeners() {
-      // document.addEventListener("touchstart", handleEvent);
+      document.addEventListener("touchstart", handleEvent);
       document.addEventListener("mousedown", handleEvent);
     }
 
@@ -185,53 +185,16 @@ export default class LoadedPage extends Component {
       ctx.scale(devicePixelRatio, devicePixelRatio);
     };
 
-    (function init() {
+    function init() {
       resizeCanvas();
-      if (window.CP) {
-        // CodePen's loop detection was causin' problems
-        // and I have no idea why, so...
-        window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000;
-      }
+
       window.addEventListener("resize", resizeCanvas);
       addClickListeners();
-      if (!!window.location.pathname.match(/fullcpgrid/)) {
-        startFauxClicking();
-      }
-      handleInactiveUser();
-    })();
-
-    function handleInactiveUser() {
-      var inactive = setTimeout(function() {
-        fauxClick(cW / 2, cH / 2);
-      }, 2000);
-
-      function clearInactiveTimeout() {
-        clearTimeout(inactive);
-        document.removeEventListener("mousedown", clearInactiveTimeout);
-        document.removeEventListener("touchstart", clearInactiveTimeout);
-      }
-
-      document.addEventListener("mousedown", clearInactiveTimeout);
-      document.addEventListener("touchstart", clearInactiveTimeout);
     }
 
-    function startFauxClicking() {
-      setTimeout(function() {
-        fauxClick(
-          anime.random(cW * 0.2, cW * 0.8),
-          anime.random(cH * 0.2, cH * 0.8)
-        );
-        startFauxClicking();
-      }, anime.random(200, 900));
-    }
-
-    function fauxClick(x, y) {
-      var fauxClick = new Event("mousedown");
-      fauxClick.pageX = x;
-      fauxClick.pageY = y;
-      document.dispatchEvent(fauxClick);
-    }
+    init();
   }
+
   render() {
     return (
       <div className="App">

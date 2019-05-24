@@ -8,36 +8,40 @@ import img_4 from "../imgs/4.png";
 import img_5 from "../imgs/5.png";
 import img_6 from "../imgs/6.png";
 
-// import img_7 from "../imgs/7.png";
-// import img_8 from "../imgs/8.png";
+import abc_1 from "../imgs/p1.png";
+import abc_2 from "../imgs/p2.png";
+import abc_3 from "../imgs/p3.png";
 
-import rocketImg from "../suitcase.png";
+import briefcaseImage from "../suitcase.png";
 
 export default class Projects extends Component {
   constructor() {
     super();
     this.state = {
       isHidden: true,
-      isClicked: false,
+      isClickedTusk: false,
+      isClickedABC: false,
       sampleT: "translateX(160px)",
       xCoord: 160,
-      isReady: false
+      isReady: false,
+      isReadyABC: false
     };
   }
 
   handleClick = () => {
-    console.log("The clock is ticking");
+    console.log("Blco");
     this.setState({
       isHidden: !this.state.isHidden,
-      isClicked: false,
-      isReady: false
+      isClickedTusk: false,
+      isClickedABC: false,
+      isReady: false,
+      isReadyABC: false
     });
   };
 
-  handleCircle = () => {
-    console.log("Blicked");
+  handleCircleTusk = () => {
     this.setState({
-      isClicked: true
+      isClickedTusk: true
     });
     setTimeout(() => {
       this.setState({
@@ -46,9 +50,19 @@ export default class Projects extends Component {
     }, 400);
   };
 
+  handleCircleABC = () => {
+    this.setState({
+      isClickedABC: true
+    });
+    setTimeout(() => {
+      this.setState({
+        isReadyABC: true
+      });
+    }, 400);
+  };
+
   moveRight = () => {
     let updatedCoords = this.state.xCoord + 317;
-    console.log(updatedCoords);
     if (updatedCoords < 900) {
       this.setState({
         sampleT: `translateX(${updatedCoords}px)`,
@@ -59,7 +73,6 @@ export default class Projects extends Component {
 
   moveLeft = () => {
     let updatedCoords = this.state.xCoord - 317;
-    console.log(updatedCoords);
     if (updatedCoords > -900) {
       this.setState({
         sampleT: `translateX(${updatedCoords}px)`,
@@ -69,13 +82,23 @@ export default class Projects extends Component {
   };
 
   render() {
-    const stylesCircle = this.state.isHidden
-      ? "circle"
-      : this.state.isClicked
-      ? "circle show presentation-box"
-      : "circle show";
+    const stylesCircleTusk = this.state.isHidden
+      ? "circleTusk"
+      : this.state.isClickedTusk
+      ? "circleTusk showCircleTusk show-presentation-tusk"
+      : "circleTusk showCircleTusk";
 
-    const stylesPresentation = this.state.isClicked
+    const stylesTitleABC = this.state.isClickedABC
+      ? "show-circle-abc-title hide"
+      : "show-circle-abc-title";
+
+    const stylesCircleABC = this.state.isHidden
+      ? "circleABC"
+      : this.state.isClickedABC
+      ? "circleABC showCircleABC show-presentation-abc"
+      : "circleABC showCircleABC";
+
+    const stylesPresentation = this.state.isClickedTusk
       ? "project-images reveal"
       : "project-images";
 
@@ -83,33 +106,57 @@ export default class Projects extends Component {
       transform: this.state.sampleT
     };
 
+    const projectImagesABC =
+      this.state.isClickedABC && this.state.isReadyABC
+        ? "project-images-abc reveal"
+        : "project-images-abc";
+
+    const projectDescriptionABC =
+      this.state.isClickedABC && this.state.isReadyABC
+        ? "project-description-abc reveal"
+        : "project-description-abc";
     return (
       <div className="Project">
         <div className="Project-container">
           <img
-            src={rocketImg}
+            src={briefcaseImage}
             height={100}
             alt="projects"
             onClick={this.handleClick}
           />
 
-          <div className={stylesCircle} onClick={this.handleCircle}>
+          <div className={stylesCircleABC} onClick={this.handleCircleABC}>
+            <div className={stylesTitleABC}>abc asian</div>
+            <div className={projectImagesABC}>
+              <img src={abc_1} alt="ss" />
+              <img src={abc_2} alt="ss" />
+              <img src={abc_3} alt="ss" />
+            </div>
+            <div className={projectDescriptionABC}>
+              ABC Asian is an E-Commerce app I came up with whose sole purpose
+              is to display some items that can be added to a cart, and redirect
+              you to Paypal to pay for the items added to the cart.
+            </div>
+          </div>
+
+          <div className={stylesCircleTusk} onClick={this.handleCircleTusk}>
+            {/* Show images if circle is ready */}
             <div
               className={
                 this.state.isReady
-                  ? "Project-images"
-                  : "Project-images transparent"
+                  ? "Project-images-tusk"
+                  : "Project-images-tusk transparent"
               }
             >
               <div
                 onClick={this.moveRight}
-                className={this.state.isClicked ? "right-button" : ""}
+                className={this.state.isClickedTusk ? "right-button" : ""}
               >
                 <div className="square" />
               </div>
               <div
                 onClick={this.moveLeft}
-                className={this.state.isClicked ? "left-button" : ""}
+                className={this.state.isClickedTusk ? "left-button" : ""}
               >
                 <div className="square" />
               </div>
@@ -150,13 +197,14 @@ export default class Projects extends Component {
                 alt="6"
               />
             </div>
-            <div className={this.state.isClicked ? "text hidden" : "text"}>
+
+            <div className={this.state.isClickedTusk ? "text hidden" : "text"}>
               tusk.world
             </div>
             <div
               className={
                 this.state.isReady
-                  ? this.state.isClicked
+                  ? this.state.isClickedTusk
                     ? "description-text"
                     : "description-text hidden"
                   : "description-text transparent"
