@@ -90,14 +90,14 @@
   height: 280px;
   width: 350px;
   border-radius: 3px !important;
-  transform: translate(-360px, -300px) !important;
+  transform: translate(-550px, -300px) !important;
 }
 
 .show-presentation-tusk {
   border-radius: 3px !important;
   height: 310px !important;
   width: 350px !important;
-  transform: translate(150px, -300px) !important;
+  transform: translate(350px, -300px) !important;
 }
 
 .project-description-abc {
