@@ -13,6 +13,7 @@ import abc_2 from "../imgs/p2.png";
 import abc_3 from "../imgs/p3.png";
 
 import briefcaseImage from "../suitcase.png";
+import openBriefcase from "../open-suitcase.png";
 
 export default class Projects extends Component {
   constructor() {
@@ -119,8 +120,9 @@ export default class Projects extends Component {
       <div className="Project">
         <div className="Project-container">
           <img
-            src={briefcaseImage}
-            height={100}
+            src={this.state.isHidden ? briefcaseImage : openBriefcase}
+            height={this.state.isHidden ? 100 : 200}
+            className={this.state.isHidden ? "" : "openBriefcase"}
             alt="projects"
             onClick={this.handleClick}
           />

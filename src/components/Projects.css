@@ -70,8 +70,15 @@
   left: 20%;
   color: whitesmoke;
   font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  font-style: italic;
   font-size: 0.6em;
   text-align: center;
+}
+
+.openBriefcase {
+  transform: translateY(-120px) scale(1);
+  transition: all .2s ease-in-out;
 }
 
 .show-presentation-abc {
@@ -83,14 +90,14 @@
   height: 280px;
   width: 350px;
   border-radius: 3px !important;
-  transform: translate(-400px, -200px) !important;
+  transform: translate(-360px, -300px) !important;
 }
 
 .show-presentation-tusk {
   border-radius: 3px !important;
   height: 310px !important;
   width: 350px !important;
-  transform: translate(150px, -200px) !important;
+  transform: translate(150px, -300px) !important;
 }
 
 .project-description-abc {
