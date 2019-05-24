@@ -77,7 +77,7 @@
 }
 
 .openBriefcase {
-  transform: translateY(-120px) scale(1);
+  transform: translateY(-60px) scale(1);
   transition: all .2s ease-in-out;
 }
 
