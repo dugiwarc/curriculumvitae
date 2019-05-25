@@ -139,7 +139,7 @@ export default class Projects extends Component {
         : "project-description-abc";
     return (
       <div className="Project">
-        <div className="Project-container">
+        <div className="Project-container" onClick={this.handleClick}>
           <img
             src={this.state.isHidden ? briefcaseImage : openBriefcase}
             height={this.state.isHidden ? 100 : 200}
