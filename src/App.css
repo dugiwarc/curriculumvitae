@@ -208,10 +208,42 @@ canvas {
 
 @media screen and (max-width: 600px) {
   .Profile {
-    width: 330px;
+    width: 240px;
   }
 
   .App {
     font-size: 1rem;
+  }
+
+  .showCircleTusk {
+    opacity: 1;
+    transform: translate(0px, 0px) scale(1) !important;
+    transition: 0.4s ease-in-out;
+  }
+
+  .show-presentation-tusk {
+    border-radius: 0px !important;
+    height: 310px !important;
+    width: 350px !important;
+    transform: translate(-105px, -100px) scale(.7) !important;
+    box-shadow: 0 10px 4px -6px #000;
+    background: #252525 !important;
+  }
+
+  .showCircleABC {
+    opacity: 1;
+    transform: translate(00px, 200px) scale(1) !important;
+    transition-delay: .1s !important;
+    transition: all 0.4s ease-out;
+    transition-delay: 0s;
+    position: relative;
+  }
+
+  .Languages {
+    transform: scale(.6) translateY(-150px);
+  }
+
+  .Project {
+    transform: translateY(-200px);
   }
 }

@@ -178,7 +178,7 @@ export default class LoadedPage extends Component {
     });
 
     var resizeCanvas = function() {
-      cW = window.innerWidth;
+      cW = window.screen.availWidth;
       cH = window.screen.availHeight;
       c.width = cW * devicePixelRatio;
       c.height = cH * devicePixelRatio;
