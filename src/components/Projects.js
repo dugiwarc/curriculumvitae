@@ -135,6 +135,14 @@ export default class Projects extends Component {
               <img src={abc_3} alt="ss" />
             </div>
             <div className={projectDescriptionABC}>
+              <div className="bannerABC">
+                <a
+                  href="https://stupefied-lichterman-cd4eea.netlify.com/"
+                  className="href"
+                >
+                  Visit
+                </a>
+              </div>
               ABC Asian is an E-Commerce app I came up with whose sole purpose
               is to display some items that can be added to a cart, and redirect
               you to Paypal to pay for the items added to the cart.
@@ -212,6 +220,11 @@ export default class Projects extends Component {
                   : "description-text transparent"
               }
             >
+              <div className="bannerTusk">
+                <a href="http://www.tusk.world" className="href">
+                  Visit
+                </a>
+              </div>
               Tusk is an app I am working on that uses Node.js, Mongo, Express
               and Socket.io. It allows registered users to post favors, chat,
               search, upload files and others. I am currently working on
