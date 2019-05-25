@@ -29,7 +29,6 @@
   border-radius: 100px;
   width: 150px;
   background: black;
-  opacity: 0;
 }
 
 .circleTusk {
@@ -94,7 +93,6 @@
   transform: translate(-550px, -300px) !important;
   box-shadow: 0 10px 4px -6px #000;
   background: #252525;
-
 }
 
 .show-presentation-tusk {

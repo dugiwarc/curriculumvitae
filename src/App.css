@@ -256,6 +256,7 @@ canvas {
 
   .Languages {
     transform: scale(.6) translateY(-80px);
+    margin-bottom: 50px;
   }
 
   .Project {

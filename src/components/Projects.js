@@ -110,6 +110,7 @@ export default class Projects extends Component {
       : this.state.isClickedABC
       ? "circleABC showCircleABC show-presentation-abc"
       : "circleABC showCircleABC";
+
     const stylesCircleABC480 = this.state.isHidden
       ? "circleABC"
       : this.state.isClickedABC
