@@ -83,21 +83,41 @@ export default class Projects extends Component {
   };
 
   render() {
-    const stylesCircleTusk = this.state.isHidden
+    let windowW = window.innerWidth;
+    // let windowH = window.innerHeight;
+
+    const stylesCircleTuskFull = this.state.isHidden
       ? "circleTusk"
       : this.state.isClickedTusk
       ? "circleTusk showCircleTusk show-presentation-tusk"
       : "circleTusk showCircleTusk";
 
+    const stylesCircleTusk480 = this.state.isHidden
+      ? "circleTusk"
+      : this.state.isClickedTusk
+      ? "circleTusk showCircleTusk480 show-presentation-tusk480"
+      : "circleTusk showCircleTusk480";
+
+    const stylesCircleTusk =
+      windowW < 600 ? stylesCircleTusk480 : stylesCircleTuskFull;
+
     const stylesTitleABC = this.state.isClickedABC
       ? "show-circle-abc-title hide"
       : "show-circle-abc-title";
 
-    const stylesCircleABC = this.state.isHidden
+    const stylesCircleABCFull = this.state.isHidden
       ? "circleABC"
       : this.state.isClickedABC
       ? "circleABC showCircleABC show-presentation-abc"
       : "circleABC showCircleABC";
+    const stylesCircleABC480 = this.state.isHidden
+      ? "circleABC"
+      : this.state.isClickedABC
+      ? "circleABC showCircleABC480 show-presentation-abc480"
+      : "circleABC showCircleABC480";
+
+    const stylesCircleABC =
+      windowW < 600 ? stylesCircleABC480 : stylesCircleABCFull;
 
     const stylesPresentation = this.state.isClickedTusk
       ? "project-images reveal"
