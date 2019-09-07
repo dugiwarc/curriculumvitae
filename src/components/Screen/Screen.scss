@@ -1,8 +1,7 @@
 .Screen {
 	display: flex;
-	width: 100%;
 	overflow: hidden;
-	max-width: 800px;
+	width: 100%;
 	.image-left,
 	.image-right {
 		transition: all 0.6s ease-in-out;
