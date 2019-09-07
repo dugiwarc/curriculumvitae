@@ -14,7 +14,7 @@ class Home extends React.Component {
 			this.setState({
 				hasLoaded: true
 			});
-		}, 100);
+		}, 900);
 	}
 	render() {
 		const { hasLoaded } = this.state;
