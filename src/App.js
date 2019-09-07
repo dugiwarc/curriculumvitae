@@ -1,18 +1,19 @@
 import React from "react";
-import NotFound from "./components/NotFound";
+import NotFound from "./components/NotFound/NotFound";
 import { Route, Switch } from "react-router-dom";
-import "./App.css";
-import Page from "./Page";
+import Home from "./pages/Home/Home";
 
-function App() {
-  return (
-    <div className="App">
-      <Switch>
-        <Route exact path="/" component={Page} />
-        <Route render={() => <NotFound />} />
-      </Switch>
-    </div>
-  );
+class App extends React.Component {
+	render() {
+		return (
+			<div className='App'>
+				<Switch>
+					<Route exact path='/' component={Home} />
+					<Route render={() => <NotFound />} />
+				</Switch>
+			</div>
+		);
+	}
 }
 
 export default App;

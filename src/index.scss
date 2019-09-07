@@ -1,0 +1,10 @@
+@font-face {
+	font-family: "Gingham";
+	src: url("./assets/fonts/Gingham.woff2") format("woff2");
+}
+
+* {
+	margin-right: 0;
+	font-family: "Gingham", sans-serif;
+	font-variation-settings: "wght" 700, "wdth" 400;
+}

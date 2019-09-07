@@ -1,0 +1,13 @@
+.NotFound {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+	h1 {
+		font-size: 10em;
+	}
+	.NotFound-subtext {
+		font-size: 50px;
+	}
+}

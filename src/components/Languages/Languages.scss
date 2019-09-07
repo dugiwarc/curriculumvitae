@@ -1,0 +1,27 @@
+.Languages {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	.languageRoller {
+		display: flex;
+		font-size: 4rem;
+		transform: scale(0.4);
+		transform-origin: 0%;
+		img {
+			box-sizing: border-box;
+			margin-left: 20px;
+		}
+	}
+
+	.languagesMain {
+		overflow: hidden;
+		width: 450px;
+		height: 80px;
+	}
+
+	ul li {
+		height: 80px;
+		list-style-type: none;
+	}
+}

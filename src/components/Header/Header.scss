@@ -1,0 +1,43 @@
+.Header {
+	display: flex;
+	padding: 0 2%;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	height: 50px;
+	margin-top: 20px;
+	.left {
+		flex: 6;
+	}
+	.right {
+		display: flex;
+		flex: 3;
+		justify-content: space-evenly;
+		max-width: 400px;
+		.pricing,
+		.resume {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.pricing {
+			font-size: 1rem;
+		}
+		.resume {
+			height: 50%;
+			a {
+				font-weight: inherit;
+				padding: 5px 10px;
+				text-decoration: none;
+				background: goldenrod;
+				color: white;
+				transition: all 0.3s ease-in-out;
+				&:hover {
+					background: white;
+					color: goldenrod;
+				}
+			}
+		}
+	}
+}

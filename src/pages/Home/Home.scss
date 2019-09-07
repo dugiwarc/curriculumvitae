@@ -1,0 +1,9 @@
+.Home {
+	section {
+		height: calc(100vh - 150px);
+		display: flex;
+		// & > * {
+		// 	border: 1px solid black;
+		// }
+	}
+}
