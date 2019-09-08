@@ -1,4 +1,11 @@
 .Project {
 	display: flex;
 	flex-direction: column;
+	transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+	.tools-and-fonts {
+		max-width: 400px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 }

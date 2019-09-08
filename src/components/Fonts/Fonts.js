@@ -1,6 +1,8 @@
 import React from "react";
 import Font from "../Font/Font";
 
+import "./Fonts.scss";
+
 class Fonts extends React.Component {
 	render() {
 		return (

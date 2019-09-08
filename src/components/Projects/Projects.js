@@ -23,6 +23,7 @@ const Projects = () => {
 							imageMobileCoords={item.imageMobileCoords}
 							colors={item.colors}
 							fonts={item.fonts}
+							tools={item.tools}
 						/>
 					);
 				})}

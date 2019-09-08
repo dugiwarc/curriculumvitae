@@ -4,6 +4,8 @@ import Profile from "../../components/Profile/Profile";
 import Projects from "../../components/Projects/Projects";
 import Spinner from "../../components/Spinner/Spinner";
 import SocialBox from "../../components/SocialBox/SocialBox";
+import SidebarNavigator from "../../components/SidebarNavigator/SidebarNavigator";
+import Pricing from "../../components/Pricing/Pricing";
 
 import "./Home.scss";
 
@@ -23,9 +25,11 @@ class Home extends React.Component {
 				{hasLoaded ? (
 					<div className='Home'>
 						<Header />
+						<Pricing />
 						<section>
 							<>
 								<Profile />
+								<SidebarNavigator />
 								<Projects />
 							</>
 							<>

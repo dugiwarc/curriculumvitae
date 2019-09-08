@@ -1,0 +1,12 @@
+.Pricing {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	z-index: 100;
+	transition: 0.4s all ease-in-out;
+	background: white;
+	transform: translateY(-110vh);
+}
